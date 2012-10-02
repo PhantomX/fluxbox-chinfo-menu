@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-02 01:51-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: bin/fluxbox-chinfo-menu:75
+#, sh-format
+msgid "${FB_CHINFO_XDG_BN} is not installed!"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:81
+#, sh-format
+msgid "${FB_PYTHON_BN} is not installed!"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:98
+#, sh-format
+msgid ""
+"Usage : ${fcmcommand} <parameter>\n"
+"Generate menus for fluxbox.\n"
+"\n"
+"<parameter> can be:\n"
+"  -a|--all         Generate all menus\n"
+"  -b|--bgmenu      Generate only background menu\n"
+"  -m|--mainmenu    Generate only main menu\n"
+"  -x|--xdgmenu     Generate only XDG menu\n"
+"  -h|--help        This message\n"
+"  -v|--version     Output version\n"
+"\n"
+"Run without any parameters to only generate ${FB_CHINFO_USERCONFIG}."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:123
+#, sh-format
+msgid "Generating ${FB_XDGMENU} with icons..."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:126
+#, sh-format
+msgid "Generating ${FB_XDGMENU}..."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:159
+#, sh-format
+msgid "Generating ${FB_BGMENU}..."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:164
+#, sh-format
+msgid "Backgrounds"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:164 bin/fluxbox-chinfo-menu:174
+#: bin/fluxbox-chinfo-menu:187
+#, sh-format
+msgid "Set the Background"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:165
+#, sh-format
+msgid "Random Background"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:174
+#, sh-format
+msgid "Backgrounds ${rmenucounter}"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:200
+#, sh-format
+msgid "Warning: None background found in:"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:207
+#, sh-format
+msgid "Generating ${FB_MAINMENU}..."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:212
+#, sh-format
+msgid "Terminal"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:213
+#, sh-format
+msgid "File Manager"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:214
+#, sh-format
+msgid "Web Browser"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:215
+#, sh-format
+msgid "Email Reader"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:224
+#, sh-format
+msgid "Fluxbox Menu"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:225
+#, sh-format
+msgid "Configure"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:226
+#, sh-format
+msgid "System Styles"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:226 bin/fluxbox-chinfo-menu:229
+#, sh-format
+msgid "Choose a style..."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:229
+#, sh-format
+msgid "User Styles"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:235
+#, sh-format
+msgid "Workspace List"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:236
+#, sh-format
+msgid "Tools"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:240
+#, sh-format
+msgid "GTK+ appearence"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:242 bin/fluxbox-chinfo-menu:245
+#: bin/fluxbox-chinfo-menu:248
+#, sh-format
+msgid "Window name"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:243 bin/fluxbox-chinfo-menu:246
+#: bin/fluxbox-chinfo-menu:249
+#, sh-format
+msgid "Window info"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:251
+#, sh-format
+msgid "Screenshot"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:253
+#, sh-format
+msgid "Regenerate menus"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:254
+#, sh-format
+msgid "All"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:255
+#, sh-format
+msgid "Only main menu"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:256
+#, sh-format
+msgid "Only submenus"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:257
+#, sh-format
+msgid "Only backgrounds menu"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:260
+#, sh-format
+msgid "Window Managers"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:273
+#, sh-format
+msgid "Fluxbox Command"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:275
+#, sh-format
+msgid "Reload config"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:276
+#, sh-format
+msgid "Restart Fluxbox"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:281
+#, sh-format
+msgid "Run..."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:285
+#, sh-format
+msgid "Help & Search"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:286 bin/fluxbox-chinfo-menu:288
+#, sh-format
+msgid "Search for files..."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:287 bin/fluxbox-chinfo-menu:289
+#, sh-format
+msgid "Help"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:293
+#, sh-format
+msgid "Open New Session"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:296 bin/fluxbox-chinfo-menu:297
+#, sh-format
+msgid "Lock screen"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:299
+#, sh-format
+msgid "Logout"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:301
+#, sh-format
+msgid "Reboot"
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:302
+#, sh-format
+msgid "Shutdown"
+msgstr ""
+
+#: bin/fluxbox-dm-helper:40
+#, sh-format
+msgid "This script needs a working display."
+msgstr ""
+
+#: bin/fluxbox-dm-helper:60
+#, sh-format
+msgid ""
+"Usage : ${fdhcommand} <option>\n"
+"Script to control GDM/KDM in menus.\n"
+"\n"
+"<option> can be:\n"
+"  f|-f|--fluxbox     Exits fluxbox after some options.\n"
+"  n|-n|--new         Open a reserved display\n"
+"  r|-r|--reboot      Reboot\n"
+"  s|-s|--shutdown    Shutdown\n"
+"  h|-h|--help        This message\n"
+"  v|-v|--version     Output version\n"
+"\n"
+"Reboot/Shutdown options execute xterm with su, if no gdm/kdm found."
+msgstr ""
+
+#: bin/fluxbox-dm-helper:77
+#, sh-format
+msgid "GDM/KDM/${XTERMBASE} is not properly installed."
+msgstr ""
+
+#: bin/fluxbox-dm-helper:91
+#, sh-format
+msgid "Insert root password to reboot:"
+msgstr ""
+
+#: bin/fluxbox-dm-helper:110
+#, sh-format
+msgid "Insert root password to shutdown:"
+msgstr ""
+
+#: bin/fluxbox-dm-helper:129
+#, sh-format
+msgid "GDM/KDM do not running or do not have reserved displays configured."
+msgstr ""

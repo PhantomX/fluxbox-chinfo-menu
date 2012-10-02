@@ -1,0 +1,32 @@
+fluxbox-chinfo-menu - http://github.com/PhantomX/fluxbox-chinfo-menu
+Created by Phantom X
+2010
+
+Menu generator for Fluxbox based on XDG.
+
+--Requirements--
+bash
+xdgmenumaker >= 0.4 - http://www.salixos.org/wiki/index.php/Xdgmenumaker
+
+
+--Installation--
+
+Run from this directory:
+
+	make install
+
+To uninstall execute:
+	make uninstall
+
+
+-- Usage
+
+	/usr/bin/fluxbox-chinfo-menu <parameter>
+
+	<parameter> can be:
+	  -a|--all         Generate all menus
+	  -b|--bgmenu      Generate only background menu
+	  -m|--mainmenu    Generate only main menu
+	  -x|--xdgmenu     Generate only XDG menu
+	  -h|--help        This message
+	  -v|--version     Output version
