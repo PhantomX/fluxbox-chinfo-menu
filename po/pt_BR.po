@@ -233,12 +233,12 @@ msgstr "Executar..."
 #: bin/fluxbox-chinfo-menu:285
 #, sh-format
 msgid "Help & Search"
-msgstr "Ajuda e Procura"
+msgstr "Ajuda e Pesquisa"
 
 #: bin/fluxbox-chinfo-menu:286 bin/fluxbox-chinfo-menu:288
 #, sh-format
 msgid "Search for files..."
-msgstr "Procurar por Arquivos..."
+msgstr "Pesquisar por Arquivos..."
 
 #: bin/fluxbox-chinfo-menu:287 bin/fluxbox-chinfo-menu:289
 #, sh-format
