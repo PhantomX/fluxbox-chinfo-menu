@@ -253,7 +253,7 @@ EOF
 		[submenu] ($(eval_gettext 'Regenerate menus'))
 			[exec] ($(eval_gettext 'All')) {fluxbox-chinfo-menu -a}
 			[exec] ($(eval_gettext 'Only main menu')) {fluxbox-chinfo-menu -m}
-			[exec] ($(eval_gettext 'Only submenus')) {fluxbox-chinfo-menu -s}
+			[exec] ($(eval_gettext 'Only XDG menu')) {fluxbox-chinfo-menu -x}
 			[exec] ($(eval_gettext 'Only backgrounds menu')) {fluxbox-chinfo-menu -b}
 		[end]
 	[end]

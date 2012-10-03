@@ -13,6 +13,7 @@ xdgmenumaker >= 0.4 - http://www.salixos.org/wiki/index.php/Xdgmenumaker
 
 Run from this directory:
 
+        cmake .
 	make install
 
 To uninstall execute:
