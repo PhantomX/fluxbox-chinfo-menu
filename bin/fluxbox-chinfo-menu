@@ -4,7 +4,7 @@
 # Menu script by Phantom X <megaphantomx at bol.com.br>
 # Suggested usage: $ fluxbox-chinfo-menu -a
 #--
-# Copyright 2010-2012 Phantom X, Goiania, Brazil.
+# Copyright 2010-2015 Phantom X, Goiania, Brazil.
 # Portions of code based on perl script by Arnaud Abélard <arny@arny.org>
 # Backgrounds menu code adapted from fluxbox-generate_menu by:
 # Dung N. Lam <dnlam@users.sourceforge.net> and Han Boetes <han@mijncomputer.nl>
@@ -114,7 +114,6 @@ echo
 submenuclean(){
   sed -r \
     -e 's: (%F|%f|%i|%m|"%c"|%c|%u|%U|-o|-caption)::g' \
-    -e "s|\)\)|\\\)\)|g" \
     -i $1
 }
 

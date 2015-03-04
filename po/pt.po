@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fluxbox-chinfo-menu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-03 00:52-0300\n"
+"POT-Creation-Date: 2015-03-04 19:39-0300\n"
 "PO-Revision-Date: 2012-10-03 00:53-0300\n"
 "Last-Translator: Phantom X <megaphantomx at bol dot com dot br>\n"
 "Language-Team: Brazilian Portuguese <>\n"
@@ -57,215 +57,215 @@ msgstr ""
 "\n"
 "Execute sem nenhum parâmetro para gerar somente ${FB_CHINFO_USERCONFIG}."
 
-#: bin/fluxbox-chinfo-menu:123
+#: bin/fluxbox-chinfo-menu:122
 #, sh-format
 msgid "Generating ${FB_XDGMENU} with icons..."
 msgstr "Gerando ${FB_XDGMENU} com ícones..."
 
-#: bin/fluxbox-chinfo-menu:126
+#: bin/fluxbox-chinfo-menu:125
 #, sh-format
 msgid "Generating ${FB_XDGMENU}..."
 msgstr "Gerando ${FB_XDGMENU}..."
 
-#: bin/fluxbox-chinfo-menu:159
+#: bin/fluxbox-chinfo-menu:158
 #, sh-format
 msgid "Generating ${FB_BGMENU}..."
 msgstr "Gerando ${FB_BGMENU}..."
 
-#: bin/fluxbox-chinfo-menu:164
+#: bin/fluxbox-chinfo-menu:163
 #, sh-format
 msgid "Backgrounds"
 msgstr "Imagens de fundo"
 
-#: bin/fluxbox-chinfo-menu:164 bin/fluxbox-chinfo-menu:174
-#: bin/fluxbox-chinfo-menu:187
+#: bin/fluxbox-chinfo-menu:163 bin/fluxbox-chinfo-menu:173
+#: bin/fluxbox-chinfo-menu:186
 #, sh-format
 msgid "Set the Background"
 msgstr "Configure a Imagem de Fundo"
 
-#: bin/fluxbox-chinfo-menu:165
+#: bin/fluxbox-chinfo-menu:164
 #, sh-format
 msgid "Random Background"
 msgstr "Imagem de Fundo Aleatória"
 
-#: bin/fluxbox-chinfo-menu:174
+#: bin/fluxbox-chinfo-menu:173
 #, sh-format
 msgid "Backgrounds ${rmenucounter}"
 msgstr "Imagens de fundo ${rmenucounter}"
 
-#: bin/fluxbox-chinfo-menu:200
+#: bin/fluxbox-chinfo-menu:199
 #, sh-format
 msgid "Warning: None background found in:"
 msgstr "Aviso: Nenhuma imagem de fundo encontrada em:"
 
-#: bin/fluxbox-chinfo-menu:207
+#: bin/fluxbox-chinfo-menu:206
 #, sh-format
 msgid "Generating ${FB_MAINMENU}..."
 msgstr "Gerando ${FB_MAINMENU}..."
 
-#: bin/fluxbox-chinfo-menu:212
+#: bin/fluxbox-chinfo-menu:211
 #, sh-format
 msgid "Terminal"
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:213
+#: bin/fluxbox-chinfo-menu:212
 #, sh-format
 msgid "File Manager"
 msgstr "Gerenciador de Arquivos"
 
-#: bin/fluxbox-chinfo-menu:214
+#: bin/fluxbox-chinfo-menu:213
 #, sh-format
 msgid "Web Browser"
 msgstr "Navegador Web"
 
-#: bin/fluxbox-chinfo-menu:215
+#: bin/fluxbox-chinfo-menu:214
 #, sh-format
 msgid "Email Reader"
 msgstr "Leitor de Email"
 
-#: bin/fluxbox-chinfo-menu:224
+#: bin/fluxbox-chinfo-menu:223
 #, sh-format
 msgid "Fluxbox Menu"
 msgstr "Menu Fluxbox"
 
-#: bin/fluxbox-chinfo-menu:225
+#: bin/fluxbox-chinfo-menu:224
 #, sh-format
 msgid "Configure"
 msgstr "Configurar"
 
-#: bin/fluxbox-chinfo-menu:226
+#: bin/fluxbox-chinfo-menu:225
 #, sh-format
 msgid "System Styles"
 msgstr "Estilos do Sistema"
 
-#: bin/fluxbox-chinfo-menu:226 bin/fluxbox-chinfo-menu:229
+#: bin/fluxbox-chinfo-menu:225 bin/fluxbox-chinfo-menu:228
 #, sh-format
 msgid "Choose a style..."
 msgstr "Escolha um estilo..."
 
-#: bin/fluxbox-chinfo-menu:229
+#: bin/fluxbox-chinfo-menu:228
 #, sh-format
 msgid "User Styles"
 msgstr "Estilos do Utilizador"
 
-#: bin/fluxbox-chinfo-menu:235
+#: bin/fluxbox-chinfo-menu:234
 #, sh-format
 msgid "Workspace List"
 msgstr "Lista de Áreas de Trabalho"
 
-#: bin/fluxbox-chinfo-menu:236
+#: bin/fluxbox-chinfo-menu:235
 #, sh-format
 msgid "Tools"
 msgstr "Ferramentas"
 
-#: bin/fluxbox-chinfo-menu:240
+#: bin/fluxbox-chinfo-menu:239
 #, sh-format
 msgid "GTK+ appearence"
 msgstr "Aparência do GTK+"
 
-#: bin/fluxbox-chinfo-menu:242 bin/fluxbox-chinfo-menu:245
-#: bin/fluxbox-chinfo-menu:248
+#: bin/fluxbox-chinfo-menu:241 bin/fluxbox-chinfo-menu:244
+#: bin/fluxbox-chinfo-menu:247
 #, sh-format
 msgid "Window name"
 msgstr "Nome da Janela"
 
-#: bin/fluxbox-chinfo-menu:243 bin/fluxbox-chinfo-menu:246
-#: bin/fluxbox-chinfo-menu:249
+#: bin/fluxbox-chinfo-menu:242 bin/fluxbox-chinfo-menu:245
+#: bin/fluxbox-chinfo-menu:248
 #, sh-format
 msgid "Window info"
 msgstr "Info da Janela"
 
-#: bin/fluxbox-chinfo-menu:251
+#: bin/fluxbox-chinfo-menu:250
 #, sh-format
 msgid "Screenshot"
 msgstr "Capturar Tela"
 
-#: bin/fluxbox-chinfo-menu:253
+#: bin/fluxbox-chinfo-menu:252
 #, sh-format
 msgid "Regenerate menus"
 msgstr "Regenerar menus"
 
-#: bin/fluxbox-chinfo-menu:254
+#: bin/fluxbox-chinfo-menu:253
 #, sh-format
 msgid "All"
 msgstr "Todos"
 
-#: bin/fluxbox-chinfo-menu:255
+#: bin/fluxbox-chinfo-menu:254
 #, sh-format
 msgid "Only main menu"
 msgstr "Somente menu principal"
 
-#: bin/fluxbox-chinfo-menu:256
+#: bin/fluxbox-chinfo-menu:255
 #, sh-format
 msgid "Only XDG menu"
 msgstr "Somente menu XDG"
 
-#: bin/fluxbox-chinfo-menu:257
+#: bin/fluxbox-chinfo-menu:256
 #, sh-format
 msgid "Only backgrounds menu"
 msgstr "Somente menu de imagens de fundo"
 
-#: bin/fluxbox-chinfo-menu:260
+#: bin/fluxbox-chinfo-menu:259
 #, sh-format
 msgid "Window Managers"
 msgstr "Gerenciadores de Janelas"
 
-#: bin/fluxbox-chinfo-menu:273
+#: bin/fluxbox-chinfo-menu:272
 #, sh-format
 msgid "Fluxbox Command"
 msgstr "Comando Fluxbox"
 
-#: bin/fluxbox-chinfo-menu:275
+#: bin/fluxbox-chinfo-menu:274
 #, sh-format
 msgid "Reload config"
 msgstr "Recarregar config"
 
-#: bin/fluxbox-chinfo-menu:276
+#: bin/fluxbox-chinfo-menu:275
 #, sh-format
 msgid "Restart Fluxbox"
 msgstr "Reiniciar Fluxbox"
 
-#: bin/fluxbox-chinfo-menu:281
+#: bin/fluxbox-chinfo-menu:280
 #, sh-format
 msgid "Run..."
 msgstr "Executar..."
 
-#: bin/fluxbox-chinfo-menu:285
+#: bin/fluxbox-chinfo-menu:284
 #, sh-format
 msgid "Help & Search"
 msgstr "Ajuda e Pesquisa"
 
-#: bin/fluxbox-chinfo-menu:286 bin/fluxbox-chinfo-menu:288
+#: bin/fluxbox-chinfo-menu:285 bin/fluxbox-chinfo-menu:287
 #, sh-format
 msgid "Search for files..."
 msgstr "Pesquisar por Arquivos..."
 
-#: bin/fluxbox-chinfo-menu:287 bin/fluxbox-chinfo-menu:289
+#: bin/fluxbox-chinfo-menu:286 bin/fluxbox-chinfo-menu:288
 #, sh-format
 msgid "Help"
 msgstr "Ajuda"
 
-#: bin/fluxbox-chinfo-menu:293
+#: bin/fluxbox-chinfo-menu:292
 #, sh-format
 msgid "Open New Session"
 msgstr "Abrir Nova Sessão"
 
-#: bin/fluxbox-chinfo-menu:296 bin/fluxbox-chinfo-menu:297
+#: bin/fluxbox-chinfo-menu:295 bin/fluxbox-chinfo-menu:296
 #, sh-format
 msgid "Lock screen"
 msgstr "Travar Ecrã"
 
-#: bin/fluxbox-chinfo-menu:299
+#: bin/fluxbox-chinfo-menu:298
 #, sh-format
 msgid "Logout"
 msgstr "Sair"
 
-#: bin/fluxbox-chinfo-menu:301
+#: bin/fluxbox-chinfo-menu:300
 #, sh-format
 msgid "Reboot"
 msgstr "Reiniciar"
 
-#: bin/fluxbox-chinfo-menu:302
+#: bin/fluxbox-chinfo-menu:301
 #, sh-format
 msgid "Shutdown"
 msgstr "Desligar"
@@ -275,7 +275,7 @@ msgstr "Desligar"
 msgid "This script needs a working display."
 msgstr "Este script precisa de um display funcionando."
 
-#: bin/fluxbox-dm-helper:60
+#: bin/fluxbox-dm-helper:62
 #, sh-format
 msgid ""
 "Usage : ${fdhcommand} <option>\n"
@@ -304,22 +304,22 @@ msgstr ""
 "As opções Reiniciar/Desligar executam xterm com o su, se o gdm/kdm não for "
 "encontrado."
 
-#: bin/fluxbox-dm-helper:77
+#: bin/fluxbox-dm-helper:79
 #, sh-format
 msgid "GDM/KDM/${XTERMBASE} is not properly installed."
 msgstr "GDM/KDM/${XTERMBASE} não está propriamente instalado."
 
-#: bin/fluxbox-dm-helper:91
+#: bin/fluxbox-dm-helper:93
 #, sh-format
 msgid "Insert root password to reboot:"
 msgstr "Insira a senha de root para reiniciar:"
 
-#: bin/fluxbox-dm-helper:110
+#: bin/fluxbox-dm-helper:114
 #, sh-format
 msgid "Insert root password to shutdown:"
 msgstr "Insira a senha de root para desligar:"
 
-#: bin/fluxbox-dm-helper:129
+#: bin/fluxbox-dm-helper:135
 #, sh-format
 msgid "GDM/KDM do not running or do not have reserved displays configured."
 msgstr "GDM/KDM não está executando ou não há displays reservas configurados."

@@ -1,3 +1,9 @@
+2015-03-04  Phantom X  <megaphantomx at bol dot com dot br>
+
+ * 4.1.0
+ * fluxbox-dm-helper: Added systemd preliminary support.
+ * fluxbox-chinfo-menu: Updated submenuclean function.
+
 2012-10-02  Phantom X  <megaphantomx at bol dot com dot br>
 
  * 4.0.0
