@@ -113,7 +113,7 @@ echo
 # Remove unwanted strings on desktop Exec commands
 submenuclean(){
   sed -r \
-    -e 's: (%F|%f|%i|%m|"%c"|%c|%u|%U|-o|-caption)::g' \
+    -e 's: (%F|%f|%i|%m|"%c"|%c|%u|%U|-o|-caption "|-caption)::g' \
     -i $1
 }
 
