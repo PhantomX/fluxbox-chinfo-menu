@@ -2,7 +2,7 @@
 #-- Helper script for partial desktop managers with fluxbox--
 # Script by Phantom X <megaphantomx at bol.com.br>
 #--
-# Copyright 2008-2012 Phantom X, Goiania, Brazil.
+# Copyright 2008-2017 Phantom X, Goiania, Brazil.
 #
 # Redistribution and use of this script, with or without modification, is
 # permitted provided that the following conditions are met:
@@ -44,6 +44,8 @@ FDH_VERSION=@FCM_VERSION@
 KDMCTLBIN=/usr/bin/kdmctl
 GDMCTLBIN=/usr/bin/gdm-control
 GDMFLEXIBIN=/usr/bin/gdmflexiserver
+LIGHTDMBIN=/usr/bin/dm-tool
+LXDMBIN=/usr/bin/lxdm
 KDIALOGBIN=/usr/bin/kdialog
 ZENITYBIN=/usr/bin/zenity
 XMESSAGEBIN=/usr/bin/xmessage
@@ -51,6 +53,7 @@ XTERMBIN=/usr/bin/xterm
 SHUTCOM=/sbin/shutdown
 GKSUBIN=/usr/bin/gksu
 KDESUBIN=/usr/bin/kdesu
+LXSUBIN=/usr/bin/lxqt-sudo
 LOGINCTL=/bin/loginctl
 SYSTEMCTL=/bin/systemctl
 
@@ -76,7 +79,7 @@ echo
 
 errortxt() {
   XTERMBASE="$(basename ${XTERMBIN})"
-  EMSG="$(eval_gettext 'GDM/KDM/${XTERMBASE} is not properly installed.')"
+  EMSG="$(eval_gettext 'GDM/KDM/Lightdm/LXDM/${XTERMBASE} is not properly installed.')"
   if [ "${KDE_FULL_SESSION}" = "true" ] && [ -x "${KDIALOGBIN}" ] ; then
     "${KDIALOGBIN}" --sorry "${ETEXT}"
   elif [ -x "${ZENITYBIN}" ] ;then
@@ -94,13 +97,15 @@ rebootopt() {
   if [ -x "${KDMCTLBIN}" ] && [ "$(kdmctl caps | grep ok)" ] && [ "$(kdmctl caps | grep 'shutdown ask')" ] ;then
     "${KDMCTLBIN}" shutdown reboot ask &>/dev/null
     [ "${FLUXEXIT}" = "1" ] && fluxbox-remote exit
-  elif ps -C gdm &>/dev/null && [ -x "${GDMCTLBIN}" ] ;then
+  elif pgrep -f ^/usr/bin/gdm &>/dev/null && [ -x "${GDMCTLBIN}" ] ;then
     "${GDMCTLBIN}" --reboot &>/dev/null
     [ "${FLUXEXIT}" = "1" ] && fluxbox-remote exit
   elif "${LOGINCTL}" show-user "${USER}" &>/dev/null ;then
     "${SYSTEMCTL}" reboot &>/dev/null
   elif [ "${KDE_FULL_SESSION}" = "true" ] && [ -x "${KDESUBIN}" ] ; then
     "${KDESUBIN}" "${SHUTCOM} -t 5 -r now"
+  elif [ -x "${LXSUBIN}" ] ;then
+    "${LXSUBIN}" -s "${SHUTCOM} -t 5 -r now"
   elif [ -x "${GKSUBIN}" ] ;then
     "${GKSUBIN}" -m "${REBOOTMSG}" "${SHUTCOM} -t 5 -r now"
   elif [ -x "${XTERMBIN}" ] ;then
@@ -115,13 +120,15 @@ haltopt() {
   if [ -x "${KDMCTLBIN}" ] && [ "$(kdmctl caps | grep ok)" ] && [ "$(kdmctl caps | grep 'shutdown ask')" ] ;then
     "${KDMCTLBIN}" shutdown halt ask &>/dev/null 
     [ "${FLUXEXIT}" = "1" ] && fluxbox-remote exit
-  elif ps -C gdm &>/dev/null && [ -x "${GDMCTLBIN}" ] ;then
+  elif pgrep -f ^/usr/bin/gdm &>/dev/null && [ -x "${GDMCTLBIN}" ] ;then
     "${GDMCTLBIN}" --shutdown &>/dev/null
     [ "${FLUXEXIT}" = "1" ] && fluxbox-remote exit
   elif "${LOGINCTL}" show-user "${USER}" &>/dev/null ;then
     "${SYSTEMCTL}" poweroff &>/dev/null
   elif [ "${KDE_FULL_SESSION}" = "true" ] && [ -x "${KDESUBIN}" ] ; then
     "${KDESUBIN}" "${SHUTCOM} -t 5 -h now"
+  elif [ -x "${LXSUBIN}" ] ;then
+    "${LXSUBIN}" -s "${SHUTCOM} -t 5 -r now"
   elif [ -x "${GKSUBIN}" ] ;then
     "${GKSUBIN}" -m "${HALTMSG}" "${SHUTCOM} -t 5 -h now"
   elif [ -x "${XTERMBIN}" ] ;then
@@ -135,7 +142,11 @@ reserveopt() {
   RESMSG="$(eval_gettext 'GDM/KDM do not running or do not have reserved displays configured.')"
   if [ "$(kdmctl caps | grep ok)" ] ;then
     "${KDMCTLBIN}" reserve &>/dev/null
-  elif ps -C gdm &>/dev/null && [ -x "${GDMFLEXIBIN}" ] ;then
+  elif pgrep -f ^/usr/bin/lightdm &>/dev/null && [ -x "${LIGHTDMBIN}" ] ;then
+    "${LIGHTDMBIN}" switch-to-greeter &>/dev/null
+  elif pgrep -f ^"${LXDMBIN}" &>/dev/null && [ -x "${LXDMBIN}" ] ;then
+    "${LXDMBIN}" -c USER_SWITCH &>/dev/null
+  elif pgrep -f ^/usr/bin/gdm &>/dev/null && [ -x "${GDMFLEXIBIN}" ] ;then
     "${GDMFLEXIBIN}" -s &>/dev/null
   elif [ "${KDE_FULL_SESSION}" = "true" ] && [ -x "${KDIALOGBIN}" ] ; then
     "${KDIALOGBIN}" --sorry "${RESTEXT}"

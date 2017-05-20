@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-04 19:39-0300\n"
+"POT-Creation-Date: 2017-01-08 15:37-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -262,7 +262,7 @@ msgstr ""
 msgid "This script needs a working display."
 msgstr ""
 
-#: bin/fluxbox-dm-helper:62
+#: bin/fluxbox-dm-helper:65
 #, sh-format
 msgid ""
 "Usage : ${fdhcommand} <option>\n"
@@ -279,22 +279,22 @@ msgid ""
 "Reboot/Shutdown options execute xterm with su, if no gdm/kdm found."
 msgstr ""
 
-#: bin/fluxbox-dm-helper:79
+#: bin/fluxbox-dm-helper:82
 #, sh-format
-msgid "GDM/KDM/${XTERMBASE} is not properly installed."
+msgid "GDM/KDM/Lightdm/LXDM/${XTERMBASE} is not properly installed."
 msgstr ""
 
-#: bin/fluxbox-dm-helper:93
+#: bin/fluxbox-dm-helper:96
 #, sh-format
 msgid "Insert root password to reboot:"
 msgstr ""
 
-#: bin/fluxbox-dm-helper:114
+#: bin/fluxbox-dm-helper:119
 #, sh-format
 msgid "Insert root password to shutdown:"
 msgstr ""
 
-#: bin/fluxbox-dm-helper:135
+#: bin/fluxbox-dm-helper:142
 #, sh-format
 msgid "GDM/KDM do not running or do not have reserved displays configured."
 msgstr ""

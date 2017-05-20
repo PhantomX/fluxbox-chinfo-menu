@@ -6,7 +6,7 @@ Menu generator for Fluxbox based on XDG.
 
 --Requirements--
 bash
-xdgmenumaker >= 0.4 - http://www.salixos.org/wiki/index.php/Xdgmenumaker
+xdgmenumaker >= 1.4 - http://www.salixos.org/wiki/index.php/Xdgmenumaker
 
 
 --Installation--
