@@ -22,7 +22,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Translations only work with utf8 locales
-if [ ! $(echo ${LANG} | grep -i \\.utf8) ] && [ ! $(echo ${LANG} | grep -i \\.utf-8) ]; then
+if [ ! "$(echo ${LANG} | grep -i \\.utf8)" ] && [ ! "$(echo ${LANG} | grep -i \\.utf-8)" ]; then
   LANG=C
 fi
 
@@ -30,7 +30,7 @@ fi
 export TEXTDOMAIN="fluxbox-chinfo-menu"
 export TEXTDOMAINDIR="/usr/share/locale"
 if [ -x /usr/bin/gettext.sh ] ;then
-  . /usr/bin/gettext.sh
+  source /usr/bin/gettext.sh
 else
   echo "Missing /usr/bin/gettext.sh"
   exit 1
@@ -63,7 +63,7 @@ fdhcommand="$0"
 
 txt() {
 eval_gettext 'Usage : ${fdhcommand} <option>
-Script to control GDM/KDM in menus.
+Script to control GDM/KDM/LightDM in menus.
 
 <option> can be:
   f|-f|--fluxbox     Exits fluxbox after some options.
@@ -73,7 +73,7 @@ Script to control GDM/KDM in menus.
   h|-h|--help        This message
   v|-v|--version     Output version
 
-Reboot/Shutdown options execute xterm with su, if no gdm/kdm found.'
+Reboot/Shutdown options execute xterm with su, if no gdm/kdm/lightdm found.'
 echo
 }
 
@@ -94,7 +94,7 @@ errortxt() {
 
 rebootopt() {
   REBOOTMSG="$(eval_gettext 'Insert root password to reboot:')"
-  if [ -x "${KDMCTLBIN}" ] && [ "$(kdmctl caps | grep ok)" ] && [ "$(kdmctl caps | grep 'shutdown ask')" ] ;then
+  if [ -x "${KDMCTLBIN}" ] && kdmctl caps 2>/dev/null | grep -q ok && kdmctl caps 2>/dev/null | grep -q 'shutdown ask' ;then
     "${KDMCTLBIN}" shutdown reboot ask &>/dev/null
     [ "${FLUXEXIT}" = "1" ] && fluxbox-remote exit
   elif pgrep -f ^/usr/bin/gdm &>/dev/null && [ -x "${GDMCTLBIN}" ] ;then
@@ -117,7 +117,7 @@ rebootopt() {
 
 haltopt() {
   HALTMSG="$(eval_gettext 'Insert root password to shutdown:')"
-  if [ -x "${KDMCTLBIN}" ] && [ "$(kdmctl caps | grep ok)" ] && [ "$(kdmctl caps | grep 'shutdown ask')" ] ;then
+  if [ -x "${KDMCTLBIN}" ] && kdmctl caps 2>/dev/null | grep -q ok && kdmctl caps 2>/dev/null | grep -q 'shutdown ask' ;then
     "${KDMCTLBIN}" shutdown halt ask &>/dev/null 
     [ "${FLUXEXIT}" = "1" ] && fluxbox-remote exit
   elif pgrep -f ^/usr/bin/gdm &>/dev/null && [ -x "${GDMCTLBIN}" ] ;then
@@ -139,21 +139,21 @@ haltopt() {
 }
 
 reserveopt() {
-  RESMSG="$(eval_gettext 'GDM/KDM do not running or do not have reserved displays configured.')"
-  if [ "$(kdmctl caps | grep ok)" ] ;then
+  RESMSG="$(eval_gettext 'GDM/KDM/LightDM do not running or do not have reserved displays configured.')"
+  if kdmctl caps 2>/dev/null | grep -q ok  ;then
     "${KDMCTLBIN}" reserve &>/dev/null
-  elif pgrep -f ^/usr/bin/lightdm &>/dev/null && [ -x "${LIGHTDMBIN}" ] ;then
+  elif pgrep -f ^/usr/sbin/lightdm &>/dev/null && [ -x "${LIGHTDMBIN}" ] ;then
     "${LIGHTDMBIN}" switch-to-greeter &>/dev/null
   elif pgrep -f ^"${LXDMBIN}" &>/dev/null && [ -x "${LXDMBIN}" ] ;then
     "${LXDMBIN}" -c USER_SWITCH &>/dev/null
   elif pgrep -f ^/usr/bin/gdm &>/dev/null && [ -x "${GDMFLEXIBIN}" ] ;then
     "${GDMFLEXIBIN}" -s &>/dev/null
   elif [ "${KDE_FULL_SESSION}" = "true" ] && [ -x "${KDIALOGBIN}" ] ; then
-    "${KDIALOGBIN}" --sorry "${RESTEXT}"
+    "${KDIALOGBIN}" --sorry "${RESMSG}"
   elif [ -x "${ZENITYBIN}" ] ;then
-    "${ZENITYBIN}" --info --text="${RESTEXT}"
+    "${ZENITYBIN}" --info --text="${RESMSG}"
   elif [ -x "${XMESSAGEBIN}" ] ;then
-    "${XMESSAGEBIN}" -default okay -center "${RESTEXT}"
+    "${XMESSAGEBIN}" -default okay -center "${RESMSG}"
   else
     echo "${RESMSG}"
   fi
