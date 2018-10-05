@@ -2,7 +2,7 @@
 #-- Helper script for partial desktop managers with fluxbox--
 # Script by Phantom X <megaphantomx at bol.com.br>
 #--
-# Copyright 2008-2017 Phantom X, Goiania, Brazil.
+# Copyright 2008-2018 Phantom X, Goiania, Brazil.
 #
 # Redistribution and use of this script, with or without modification, is
 # permitted provided that the following conditions are met:
@@ -22,7 +22,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Translations only work with utf8 locales
-if [ ! "$(echo ${LANG} | grep -i \\.utf8)" ] && [ ! "$(echo ${LANG} | grep -i \\.utf-8)" ]; then
+if ! echo "${LANG}" | grep -q -i \\.utf8 && ! echo "${LANG}" | grep -q -i \\.utf-8; then
   LANG=C
 fi
 
@@ -161,7 +161,7 @@ reserveopt() {
 
 case "$1" in
   v|-v|--version)
-    echo ${FDH_VERSION}
+    echo "${FDH_VERSION}"
     exit 0
     ;;
 esac

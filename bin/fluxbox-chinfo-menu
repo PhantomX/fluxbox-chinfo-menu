@@ -4,7 +4,7 @@
 # Menu script by Phantom X <megaphantomx at bol.com.br>
 # Suggested usage: $ fluxbox-chinfo-menu -a
 #--
-# Copyright 2010-2017 Phantom X, Goiania, Brazil.
+# Copyright 2010-2018 Phantom X, Goiania, Brazil.
 # Portions of code based on perl script by Arnaud Abélard <arny@arny.org>
 # Backgrounds menu code adapted from fluxbox-generate_menu by:
 # Dung N. Lam <dnlam@users.sourceforge.net> and Han Boetes <han@mijncomputer.nl>
@@ -24,8 +24,10 @@
 #       Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #       MA 02110-1301, USA.
 
+# shellcheck disable=SC2016
+
 # Translations only work with utf8 locales
-if [ ! "$(echo ${LANG} | grep -i \\.utf8)" ] && [ ! "$(echo ${LANG} | grep -i \\.utf-8)" ]; then
+if ! echo "${LANG}" | grep -q -i \\.utf8 && ! echo "${LANG}" | grep -q -i \\.utf-8; then
   LANG=C
 fi
 
@@ -33,7 +35,7 @@ fi
 export TEXTDOMAIN="fluxbox-chinfo-menu"
 export TEXTDOMAINDIR="/usr/share/locale"
 if [ -x /usr/bin/gettext.sh ] ;then
-  . /usr/bin/gettext.sh
+  source /usr/bin/gettext.sh
 else
   echo "Missing /usr/bin/gettext.sh"
   exit 1
@@ -70,7 +72,7 @@ FB_BACKGROUND_DIRS="${FB_USERDIR}/backgrounds/:/usr/share/fluxbox/backgrounds/"
 unset FB_TERM FB_FILE FB_BROWSER FB_MAIL FB_XDGICONSOPT
 
 if [ ! -x "${FB_CHINFO_XDG}" ] ;then
-  FB_CHINFO_XDG_BN=$(basename ${FB_CHINFO_XDG})
+  FB_CHINFO_XDG_BN="$(basename ${FB_CHINFO_XDG})"
   eval_gettext '${FB_CHINFO_XDG_BN} is not installed!' ;echo
   exit 1
 fi
@@ -107,7 +109,7 @@ echo
 submenuclean(){
   sed -r \
     -e 's: (%F|%f|%i|%m|"%c"|%c|%u|%U|-o|-caption "|-caption)::g' \
-    -i $1
+    -i "$1"
 }
 
 xdgmenu(){
@@ -124,16 +126,16 @@ xdgmenu(){
 
 # Tests if command exists and are executable
 find_exec(){
-  COMMAND=$(which "$(echo $3 | cut -d' ' -f1)" 2>/dev/null) || :
-  if [ -n "${COMMAND}" ] && [ -x "${COMMAND}" ] ;then
+  COMMAND=$(type -P "$(echo $3 | cut -d' ' -f1)" 2>/dev/null) || :
+  if [ -x "${COMMAND}" ] ;then
     echo "$1[exec] ($2) {$3}" >> "${FB_MAINMENU_TMP}"
   fi
 }
 
 # Tests if wm command exists and are executable
 find_wm(){
-  COMMAND=$(which "$(echo $3 | cut -d' ' -f1)" 2>/dev/null) || :
-  if [ -n "${COMMAND}" ] && [ -x "${COMMAND}" ] ;then
+  COMMAND=$(type -P "$(echo $3 | cut -d' ' -f1)" 2>/dev/null) || :
+  if [ -x "${COMMAND}" ] ;then
     echo "$1[restart] ($2) {$3}" >> "${FB_MAINMENU_TMP}"
   fi
 }
@@ -164,11 +166,11 @@ bgmenu(){
         rmenucounter=${menucounter}
       fi
       echo "		[submenu] ($(eval_gettext 'Backgrounds ${rmenucounter}')) {$(eval_gettext 'Set the Background')}" >> "${FB_BGMENU_TMP}"
-      find ${FB_BACKGROUND_DIRS} -follow -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.xpm' -o -iname '*.bmp' -o -name '*.gif' -o -iname '*.tiff' \) 2> /dev/null | sort | while read i; do
+      find ${FB_BACKGROUND_DIRS} -follow -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.xpm' -o -iname '*.bmp' -o -name '*.gif' -o -iname '*.tiff' \) 2> /dev/null | sort | while read -r i; do
         counter=$(( counter + 1 ))
         if [ ${counter} -eq 30 ]; then
           counter=1
-          menucounter=$(expr ${menucounter} + 1)
+          menucounter=$(( menucounter + 1 ))
           if [ "$(echo -n ${menucounter} | wc -c)" -eq 1 ] ;then
             rmenucounter=0${menucounter}
             [ "${menucounter}" -eq 1 ] && rmenucounter=" 0${menucounter}"
@@ -182,7 +184,7 @@ bgmenu(){
       done
       echo '		[end]' >> "${FB_BGMENU_TMP}"
     else
-      find ${FB_BACKGROUND_DIRS} -follow -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.xpm' -o -iname '*.bmp' -o -name '*.gif' -o -iname '*.tiff' \) 2> /dev/null | sort | while read i; do
+      find ${FB_BACKGROUND_DIRS} -follow -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.xpm' -o -iname '*.bmp' -o -name '*.gif' -o -iname '*.tiff' \) 2> /dev/null | sort | while read -r i; do
         addbackground "$i"
       done
     fi
@@ -312,7 +314,7 @@ case "$1" in
     xdgmenu
     ;;
   -v|--version)
-    echo ${FCM_VERSION}
+    echo "${FCM_VERSION}"
     exit 0
   ;;
   -h|*)
