@@ -40,3 +40,5 @@ FB_FILE=Thunar
 FB_BROWSER=firefox
 # Mail client
 FB_MAIL=thunderbird
+# Runner
+FB_RUN="fbrun -title 'Run...' -nearmouse -font 'luxisans-10'"

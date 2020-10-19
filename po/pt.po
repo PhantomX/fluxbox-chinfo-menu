@@ -2,20 +2,20 @@
 # Copyright (C) 2012
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Phantom X <megaphantomx at bol dot com dot br>, 2012, 2017.
+# Phantom X <megaphantomx at bol dot com dot br>, 2012, 2017, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: fluxbox-chinfo-menu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-04 21:07-0300\n"
-"PO-Revision-Date: 2017-01-08 15:41-0300\n"
+"POT-Creation-Date: 2020-10-19 16:40-0300\n"
+"PO-Revision-Date: 2020-10-19 16:43-0300\n"
 "Last-Translator: Phantom X <megaphantomx at bol dot com dot br>\n"
 "Language-Team: Portuguese <>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 20.08.1\n"
 "Plural-Forms:  nplurals=2; plural=(n > 1);\n"
 
 #: bin/fluxbox-chinfo-menu:76
@@ -222,45 +222,50 @@ msgstr "Reiniciar Fluxbox"
 
 #: bin/fluxbox-chinfo-menu:275
 #, sh-format
+msgid "Run.."
+msgstr "Executar..."
+
+#: bin/fluxbox-chinfo-menu:277
+#, sh-format
 msgid "Run..."
 msgstr "Executar..."
 
-#: bin/fluxbox-chinfo-menu:279
+#: bin/fluxbox-chinfo-menu:282
 #, sh-format
 msgid "Help & Search"
 msgstr "Ajuda e Pesquisa"
 
-#: bin/fluxbox-chinfo-menu:280 bin/fluxbox-chinfo-menu:282
+#: bin/fluxbox-chinfo-menu:283 bin/fluxbox-chinfo-menu:285
 #, sh-format
 msgid "Search for files..."
 msgstr "Pesquisar por Arquivos..."
 
-#: bin/fluxbox-chinfo-menu:281 bin/fluxbox-chinfo-menu:283
+#: bin/fluxbox-chinfo-menu:284 bin/fluxbox-chinfo-menu:286
 #, sh-format
 msgid "Help"
 msgstr "Ajuda"
 
-#: bin/fluxbox-chinfo-menu:287
+#: bin/fluxbox-chinfo-menu:290
 #, sh-format
 msgid "Open New Session"
 msgstr "Abrir Nova Sessão"
 
-#: bin/fluxbox-chinfo-menu:290 bin/fluxbox-chinfo-menu:291
+#: bin/fluxbox-chinfo-menu:293 bin/fluxbox-chinfo-menu:294
 #, sh-format
 msgid "Lock screen"
 msgstr "Travar Ecrã"
 
-#: bin/fluxbox-chinfo-menu:293
+#: bin/fluxbox-chinfo-menu:296
 #, sh-format
 msgid "Logout"
 msgstr "Sair"
 
-#: bin/fluxbox-chinfo-menu:295
+#: bin/fluxbox-chinfo-menu:298
 #, sh-format
 msgid "Reboot"
 msgstr "Reiniciar"
 
-#: bin/fluxbox-chinfo-menu:296
+#: bin/fluxbox-chinfo-menu:299
 #, sh-format
 msgid "Shutdown"
 msgstr "Desligar"
@@ -271,7 +276,7 @@ msgid "This script needs a working display."
 msgstr "Este script precisa de um display funcionando."
 
 #: bin/fluxbox-dm-helper:65
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "Usage : ${fdhcommand} <option>\n"
 "Script to control GDM/KDM/LightDM in menus.\n"
@@ -287,7 +292,7 @@ msgid ""
 "Reboot/Shutdown options execute xterm with su, if no gdm/kdm/lightdm found."
 msgstr ""
 "Uso : ${fdhcommand} <opção\n"
-"Script para controlar o GDM/KDM em menus.\n"
+"Script para controlar o GDM/KDM/LightDM em menus.\n"
 "\n"
 "  f|-f|--fluxbox     Sair do fluxbox após algumas opções.\n"
 "  n|-n|--new         Abrir um display reserva\n"
@@ -296,8 +301,8 @@ msgstr ""
 "  h|-h|--help        Esta mensagem\n"
 "  v|-v|--version     Informar a versão\n"
 "\n"
-"As opções Reiniciar/Desligar executam xterm com o su, se o gdm/kdm não for "
-"encontrado."
+"As opções Reiniciar/Desligar executam xterm com o su, se o gdm/kdm/lightdm "
+"não for encontrado."
 
 #: bin/fluxbox-dm-helper:82
 #, sh-format
@@ -315,10 +320,11 @@ msgid "Insert root password to shutdown:"
 msgstr "Insira a senha de root para desligar:"
 
 #: bin/fluxbox-dm-helper:142
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "GDM/KDM/LightDM do not running or do not have reserved displays configured."
-msgstr "GDM/KDM não está executando ou não há displays reservas configurados."
+msgstr ""
+"GDM/KDM/LightDM não está executando ou não há displays reservas configurados."
 
 #~ msgid "${FB_PYTHON_BN} is not installed!"
 #~ msgstr "${FB_PYTHON_BN} não está instalado!"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-04 21:07-0300\n"
+"POT-Creation-Date: 2020-10-19 16:40-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -209,45 +209,50 @@ msgstr ""
 
 #: bin/fluxbox-chinfo-menu:275
 #, sh-format
+msgid "Run.."
+msgstr ""
+
+#: bin/fluxbox-chinfo-menu:277
+#, sh-format
 msgid "Run..."
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:279
+#: bin/fluxbox-chinfo-menu:282
 #, sh-format
 msgid "Help & Search"
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:280 bin/fluxbox-chinfo-menu:282
+#: bin/fluxbox-chinfo-menu:283 bin/fluxbox-chinfo-menu:285
 #, sh-format
 msgid "Search for files..."
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:281 bin/fluxbox-chinfo-menu:283
+#: bin/fluxbox-chinfo-menu:284 bin/fluxbox-chinfo-menu:286
 #, sh-format
 msgid "Help"
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:287
+#: bin/fluxbox-chinfo-menu:290
 #, sh-format
 msgid "Open New Session"
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:290 bin/fluxbox-chinfo-menu:291
+#: bin/fluxbox-chinfo-menu:293 bin/fluxbox-chinfo-menu:294
 #, sh-format
 msgid "Lock screen"
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:293
+#: bin/fluxbox-chinfo-menu:296
 #, sh-format
 msgid "Logout"
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:295
+#: bin/fluxbox-chinfo-menu:298
 #, sh-format
 msgid "Reboot"
 msgstr ""
 
-#: bin/fluxbox-chinfo-menu:296
+#: bin/fluxbox-chinfo-menu:299
 #, sh-format
 msgid "Shutdown"
 msgstr ""

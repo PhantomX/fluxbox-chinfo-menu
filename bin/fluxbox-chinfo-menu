@@ -4,7 +4,7 @@
 # Menu script by Phantom X <megaphantomx at bol.com.br>
 # Suggested usage: $ fluxbox-chinfo-menu -a
 #--
-# Copyright 2010-2018 Phantom X, Goiania, Brazil.
+# Copyright 2010-2020 Phantom X, Goiania, Brazil.
 # Portions of code based on perl script by Arnaud Abélard <arny@arny.org>
 # Backgrounds menu code adapted from fluxbox-generate_menu by:
 # Dung N. Lam <dnlam@users.sourceforge.net> and Han Boetes <han@mijncomputer.nl>
@@ -69,7 +69,7 @@ FB_USERMENU="${FB_USERDIR}/${FB_USERMENUNAME}"
 FB_BGMENU="${FB_USERDIR}/${FB_BGMENUNAME}"
 FB_BACKGROUND_DIRS="${FB_USERDIR}/backgrounds/:/usr/share/fluxbox/backgrounds/"
 
-unset FB_TERM FB_FILE FB_BROWSER FB_MAIL FB_XDGICONSOPT
+unset FB_TERM FB_FILE FB_BROWSER FB_MAIL FB_RUN FB_XDGICONSOPT
 
 if [ ! -x "${FB_CHINFO_XDG}" ] ;then
   FB_CHINFO_XDG_BN="$(basename ${FB_CHINFO_XDG})"
@@ -271,8 +271,11 @@ cat >> "${FB_MAINMENU_TMP}" <<EOF
 [end]
 [separator]
 EOF
-
-  find_exec "" "$(eval_gettext 'Run...')" "fbrun -title '$(eval_gettext 'Run...')' ${FB_FBRUNOPTIONS}"
+  if [ "${FB_RUN}" ] ;then
+    find_exec "" "$(eval_gettext 'Run..')" "${FB_RUN}"
+  else
+    find_exec "" "$(eval_gettext 'Run...')" "fbrun -title '$(eval_gettext 'Run...')'"
+  fi
   echo "[separator]" >> "${FB_MAINMENU_TMP}"
   if which "kfind" &>/dev/null || which "khelpcenter" &>/dev/null \
     || which "gnome-search-tool" &>/dev/null || which "yelp" &>/dev/null ;then
